@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Micronext Computer Education</title>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- AOS animations -->
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  * { box-sizing: border-box}
+  .hero { position: relative; overflow: hidden; }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') center/cover  no-repeat;
+    filter: blur(4px);
+    transform: scale(1.05);
+    z-index: 0;
+  }
+  .hero > * { position: relative; z-index: 1; }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+
+<!-- nav start -->
+<nav id="navbar" class="bg-gray-800/30 fixed w-full z-50">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    
+    <!-- Logo -->
+    <a href="#" class="text-white text-3xl font-bold">
+      <i class="px-4 bi bi-laptop"></i>MicronextEdu
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" aria-expanded="false" aria-label="Toggle menu"
+      class="text-white md:hidden focus:outline-none">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menu -->
+    <div id="menu"
+      class="max-h-0 overflow-hidden md:max-h-none
+      absolute md:static rounded-lg md:rounded-none
+      top-full right-8 md:right-auto
+      w-[30%] md:w-auto
+      bg-gray-800 md:bg-transparent
+      rounded-b-lg md:rounded-none
+      shadow-lg md:shadow-none
+      py-4 md:py-0
+      space-y-2 md:space-y-0
+      md:flex md:items-center md:space-x-6
+      transform -translate-y-full opacity-0 md:translate-y-0 md:opacity-100
+      transition-transform duration-300 ease-out transition-[max-height] duration-500 ease-in-out">
+
+      <a href="#home" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Home</a>
+      <a href="#about" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">About</a>
+      <a href="#courses" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Courses</a>
+      <a href="#branches" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Branches</a>
+      <a href="#features" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Features</a>
+      <a href="#contact" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Contact</a>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- nav end -->
+
+
+
+<!-- header start -->
+
+<header id="home" class="hero min-h-screen py-20 flex items-center justify-center text-center text-white" data-aos="fade-in">
+  <div class="px-4 max-w-3xl bg-black/20 rounded-lg p-8 m-h-screen">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">Super Se Bhi Uper Computer Education</h1>
+    <p class="mt-4 text-lg  sm:text-xl">From Basic to Advanced Programming & Web Design. We Provide  Complete IT Training Solutions.Join our Professional Courses taught by industry experts and build a Successful Career in technology.</p>
+    <div class="mt-6 flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 items-center justify-center">
+      <a href="#contact" class="inline-block bg-green-700 hover:bg-green-800 hover:text-white text-white w-[100px] lg:w-auto  py-3 lg:px-6 rounded-lg">Enroll Now</a>
+      <a href="#courses" class="inline-block bg-gray-700 hover:bg-white text-white hover:text-black w-[180px] lg:w-auto py-3 px-6 rounded-lg">View All Courses</a>
+    </div>
+  </div>
+</header>
+
+<!-- header end -->
+
+
+<!-- sec1 start -->
+<section id="about" class="bg-gray-100 py-12 sm:py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+    
+    <!-- Section Heading -->
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl bg-clip-text text-gray-800 font-bold text-center mb-3">
+      About Us
+    </h2>
+    <p class="text-center text-base sm:text-lg lg:text-xl text-gray-600 mb-10">
+      Your Gateway to Professional Computer Education.
+    </p>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      
+      <!-- LEFT CONTENT -->
+      <div class="order-2 lg:order-1">
+        <p class=" text-gray-700 leading-relaxed text-sm sm:text-base lg:text-lg">
+          <span class="text-gray-800 font-semibold text-2xl">Micronext</span> Computer Education is a premier computer training institute with 3 branches across Vasai-Virar region. Established with a vision to provide quality computer education to students, professionals, and businesses, we offer comprehensive courses from basic computer literacy to advanced programming and web design.
+          With state-of-the-art infrastructure, experienced faculty, and industry-relevant curriculum, we have trained thousands of students who are now successfully placed in IT companies, MNCs, and running their own businesses.
+        </p>
+
+        <div class="mt-6">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-700">Our Vision</h3>
+          <p class="text-gray-700 text-sm sm:text-base">
+            To become the leading computer education provider in Vasai-Virar region by delivering quality education with practical training that makes our students industry-ready.
+          </p>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-700">Our Mission</h3>
+          <p class="text-gray-700 text-sm sm:text-base">
+            To empower individuals with IT skills that enhance their career prospects and enable them to thrive in the digital economy.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="order-1 lg:order-2">
+        <img 
+          src="https://images.unsplash.com/photo-1556761175-4b46a572b786"
+          alt="Office Meeting"
+          class="rounded-2xl shadow-lg w-full h-64 sm:h-80 lg:h-full object-cover"
+        >
+      </div>
+
+    </div>
+
+    <!-- TEAM CARDS -->
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 lg:mt-16 lg:ml-auto">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 text-center shadow-md hover:shadow-xl transition duration-300">
+        <div class="text-indigo-600 text-4xl sm:text-5xl mb-4">
+          <i class="bi bi-person-fill"></i>
+        </div>
+        <h4 class="font-semibold text-base sm:text-lg">Abhi Yadav</h4>
+        <p class="text-gray-600 text-sm sm:text-base">Co-Owner & Head Trainer</p>
+        <p class="text-gray-500 text-xs sm:text-sm mt-2">15+ Years Experience</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 text-center shadow-md hover:shadow-xl transition duration-300">
+        <div class="text-indigo-600 text-4xl sm:text-5xl mb-4">
+          <i class="bi bi-person-fill"></i>
+        </div>
+        <h4 class="font-semibold text-base sm:text-lg">Ravi Yadav</h4>
+        <p class="text-gray-600 text-sm sm:text-base">Co-Owner & Operations Head</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- sec end -->
+
+<!-- sec2 start -->
+
+<section id="courses" class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Comprehensive Courses</h2>
+    <p class="text-center text-gray-600 text-base sm:text-lg lg:text-xl mb-12 max-w-3xl mx-auto">
+      We offer a wide range of computer courses from basic to advanced level.</p>
+    
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- cards -->
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700"><i class="bi bi-file-earmark-text-fill text-indigo-600 text-4xl mb-2 "> </i> <br>MS Office Complete</h5>
+        <p>Master Microsoft Word, Excel, PowerPoint, Access from beginner to advanced level with practical projects, formulas, macros, and professional document creation.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700"> <i class="bi bi-palette-fill text-indigo-600 text-4xl mb-2"></i><br> Graphics & Design</h5>
+        <p>Professional courses in Photoshop, Illustrator, CorelDRAW, Canva for graphic design, logo creation, UI/UX design, and digital marketing materials.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700"> <i class="bi bi-hdd-network-fill text-indigo-600 text-4xl mb-2"></i><br> Hardware & Networking</h5>
+        <p>Complete computer assembly, troubleshooting, repair, Windows installation, LAN setup, internet configuration, and server maintenance.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700  "> <i class="bi bi-code-slash text-indigo-600 text-4xl mb-2"></i><br> Programming Languages</h5>
+        <p>C, C++, Java, Python, C# with OOP concepts, data structures, algorithms, and real-world application development projects.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700"><i class="bi bi-globe2 text-indigo-600 text-4xl mb-2"></i><br> Web Development</h5>
+        <p>Full stack web development with HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP, MySQL, WordPress, and responsive website creation.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700"><i class="bi bi-database-fill text-indigo-600 text-4xl mb-2"></i><br> Database Management</h5>
+        <p>SQL, MySQL, MS Access, database design, normalization, queries, procedures, functions, and database administration.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700"><i class="bi bi-calculator-fill text-indigo-600 text-4xl mb-2"></i><br> Tally & Accounting</h5>
+        <p>Complete Tally Prime with GST, inventory management, taxation, payroll, and financial accounting for business management.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700"> <i class="bi bi-camera-reels-fill text-indigo-600 text-4xl mb-2"></i><br> Video Editing</h5>
+        <p>Professional video editing with Adobe Premiere Pro, After Effects, Filmora for YouTube content, short films, and social media videos.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-duration="300">
+        <h5 class="text-xl font-semibold mb-2 text-gray-700"><i class="bi bi-shield-lock-fill text-indigo-600 text-4xl mb-2"></i><br> Cyber Security</h5>
+        <p>Network security, ethical hacking, cyber laws, vulnerability assessment, and security tools to protect against cyber threats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- sec2 end -->
+
+
+<!-- sec3 start -->
+
+<section id="branches" class="py-12 md:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="1500">
+    
+    <h2 class="text-3xl sm:text-4xl text-gray-800 font-bold text-center mb-8 md:mb-10">
+      Our Branches
+    </h2>
+
+    <div class="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Branch 1 -->
+      <div class="bg-white shadow-lg rounded-lg p-5 sm:p-6 hover:shadow-xl transition">
+        <h5 class="text-lg sm:text-xl text-gray-700 font-semibold mb-3">
+          Naigaon East Branch
+        </h5>
+        <p class="text-sm sm:text-base mb-2 break-words">
+          <strong>Address:</strong> Kamla Apartment 202, Auto Stand, near HDFC ATM & Wakipada, WAKIPADA, Naigaon East, Vasai-Virar, Maharashtra 401208
+        </p>
+        <p class="text-sm sm:text-base mb-2">
+          <strong>Landmark:</strong> Near HDFC ATM, Auto Stand
+        </p>
+        <p class="text-sm sm:text-base mb-3">
+          <strong>Timing:</strong> 9:00 AM - 8:00 PM (Monday to Saturday)
+        </p>
+        <p class="flex items-center gap-2 text-sm sm:text-base">
+          <i class="bi bi-telephone-fill text-gray-700"></i>
+          <a href="tel:07900191658" class="hover:text-gray-700">07900191658</a> |
+          <a href="tel:7387915683" class="hover:text-gray-700">7387915683</a>
+        </p>
+      </div>
+
+      <!-- Branch 2 -->
+      <div class="bg-white shadow-lg rounded-lg p-5 sm:p-6 hover:shadow-xl transition">
+        <h5 class="text-lg sm:text-xl text-gray-700 font-semibold mb-3">
+          Vasai East Branch
+        </h5>
+        <p class="text-sm sm:text-base mb-2 break-words">
+          <strong>Address:</strong> Nr Gayanodya High School, Kolhi Chinchoti Rd, Vasai East, Kaman, Vasai-Virar, Maharashtra 421302
+        </p>
+        <p class="text-sm sm:text-base mb-2">
+          <strong>Landmark:</strong> Near Gayanodya High School
+        </p>
+        <p class="text-sm sm:text-base mb-3">
+          <strong>Timing:</strong> 9:30 AM - 8:30 PM (Monday to Saturday)
+        </p>
+        <p class="flex items-center gap-2 text-sm sm:text-base">
+          <i class="bi bi-telephone-fill text-gray-700"></i>
+          <a href="tel:08108915683" class="hover:text-gray-700">08108915683</a> |
+          <a href="tel:7387915683" class="hover:text-gray-700">7387915683</a>
+        </p>
+      </div>
+
+      <!-- Branch 3 -->
+      <div class="bg-white shadow-lg rounded-lg p-5 sm:p-6 hover:shadow-xl transition">
+        <h5 class="text-lg sm:text-xl text-gray-700 font-semibold mb-3">
+          Nalasopara East Branch
+        </h5>
+        <p class="text-sm sm:text-base mb-2 break-words">
+          <strong>Address:</strong> Gala 5, Dhaniv Baug, Nalasopara East Naka, Vasai-Virar, Maharashtra 401209
+        </p>
+        <p class="text-sm sm:text-base mb-2">
+          <strong>Landmark:</strong> Dhaniv Baug, Nalasopara East Naka
+        </p>
+        <p class="text-sm sm:text-base mb-3">
+          <strong>Timing:</strong> 10:00 AM - 9:00 PM (Monday to Saturday)
+        </p>
+        <p class="flex items-center gap-2 text-sm sm:text-base">
+          <i class="bi bi-telephone-fill text-gray-700"></i>
+          <a href="tel:7387915683" class="hover:text-gray-700">7387915683</a> |
+          <a href="tel:07900191658" class="hover:text-gray-700">07900191658</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- sec3 end -->
+
+
+<!-- sec4 start -->
+
+<section id="features" class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4" data-aos="fade-up">
+    <h2 class="text-4xl bg-clip-text text-gray-800 font-bold text-center mb-10">Why Choose Micronext?</h2>
+    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div class="flex flex-col items-center text-center" data-aos="fade-right" lg:data-aos-delay="100">
+        <i class="bi bi-folder2-open text-4xl mb-2"></i>
+        <strong class="text-gray-700 text-xl">Expert Faculty</strong>
+        <p>Industry-experienced trainers with 10+ years of teaching experience</p>
+      </div>
+      <div class="flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="200">
+        <i class="bi bi-gear-fill text-4xl mb-2"></i>
+        <strong class="text-gray-700 text-xl">Live Projects</strong>
+        <p>Hands-on training with real-world projects and assignments</p>
+      </div>
+      <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="300">
+        <i class="bi bi-award text-4xl mb-2"></i>
+        <strong class="text-gray-700 text-xl">Certification</strong>
+        <p>Government recognized certificate upon course completion</p>
+      </div>
+      <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="400">
+        <i class="bi bi-briefcase text-4xl mb-2"></i>
+        <strong class="text-gray-700  text-xl">Placement Assistance</strong>
+        <p>100% placement support with interview preparation</p>
+      </div>
+      <div class="flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="500">
+        <i class="bi bi-clock text-4xl mb-2"></i>
+        <strong class="text-gray-700 text-xl">Flexible Timings</strong>
+        <p>Morning, afternoon, evening batches available</p>
+      </div>
+      <div class="flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="600">
+        <i class="bi bi-currency-rupee text-4xl mb-2"></i>
+        <strong class="text-gray-700 text-xl">Affordable Fees</strong>
+        <p>Quality education at reasonable fees with EMI options</p>
+      </div>
+      <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="700">
+        <i class="bi bi-people text-4xl mb-2"></i>
+        <strong class="text-gray-700 text-xl">Small Batches</strong>
+        <p>Limited students per batch for personalized attention</p>
+      </div>
+      <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="800">
+        <i class="bi bi-wifi text-4xl mb-2"></i>
+        <strong class="text-gray-700 text-xl">Wi-Fi Lab</strong>
+        <p>High-speed internet with latest computer systems</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- sec4 end -->
+
+
+<!-- footer start -->
+
+<footer id="contact" class="bg-gray-600 text-white py-16 w-full">
+  <div class="max-w-7xl mx-auto px-4" data-aos="fade-up">
+    <div class="grid gap-8 md:grid-cols-4">
+      <div>
+        <h5 class="font-semibold mb-4 text-lg sm:text-2xl">Micronext Computer Education</h5>
+        <p>Providing quality computer education since 2010. We are committed to empowering students with practical IT skills for today's digital world.</p>
+        <h2 > <span class="text-sm sm:text-base">Owners:</span> Abhi Yadav & Ravi Yadav</h2>
+        <p> <span class="text-sm sm:text-base">Email:</span> <br> info@micronextcomputereducation.com
+        </p>
+        <!-- social icons -->
+        <div class="mt-4 flex lg:justify-center md:justify-start space-x-4">
+          <a href="https://facebook.com" class="text-white hover:text-gray-300 text-2xl sm:text-3xl" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" class="text-white hover:text-gray-300 text-2xl sm:text-3xl" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://twitter.com" class="text-white hover:text-gray-300 text-2xl sm:text-3xl" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://youtube.com" class="text-white hover:text-gray-300 text-2xl sm:text-3xl" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://wa.me/917900191658" class="text-white hover:text-gray-300 text-2xl sm:text-3xl" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-4 text-lg sm:text-2xl">Quick Links</h5>
+        <ul class="space-y-2">
+          <li><a href="#home" class="block hover:text-gray-300 text-sm sm:text-base">Home</a></li>
+          <li><a href="#about" class="block hover:text-gray-300 text-sm sm:text-base">About Us</a></li>
+          <li><a href="#courses" class="block hover:text-gray-300 text-sm sm:text-base">Courses</a></li>
+          <li><a href="#branches" class="block hover:text-gray-300 text-sm sm:text-base">Our Branches</a></li>
+          <li><a href="#features" class="block hover:text-gray-300 text-sm sm:text-base">Features</a></li>
+          <li><a href="#contact" class="block hover:text-gray-300 text-sm sm:text-base">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-4 text-lg sm:text-2xl">Contact Info</h5>
+        <p>Head Branch: 079001 91658</p>
+        <p>Mobile: 7387915683</p>
+        <p>3 Branches across Vasai-Virar</p>
+        <p>Monday to Saturday: 9:00 AM - 8:30 PM</p>
+        <p>Website: micronextcomputereducation.com</p>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-4 text-lg sm:text-2xl">Popular Courses</h5>
+        <ul class="space-y-2">
+          <li class="text-sm sm:text-base">MS Office Complete Course</li>
+          <li class="text-sm sm:text-base">Web Designing & Development</li>
+          <li class="text-sm sm:text-base">Graphics Designing</li>
+          <li class="text-sm sm:text-base">Hardware & Networking</li>
+          <li class="text-sm sm:text-base">Tally with GST</li>
+          <li class="text-sm sm:text-base">Programming in Python</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-4 border-gray-700" />
+    <div class="text-center">
+      <p>&copy; 2026 Micronext Computer Education. All Rights Reserved.</p>
+      <p>Website: micronextcomputereducation.com</p>
+      
+      <p>Owners: Abhi Yadav & Ravi Yadav</p>
+
+      <p><a href="https://wa.me/917900191658?text=Enquiry%20from%20website" class="inline-block bg-green-500 hover:bg-green-600 text-white py-2 my-4 px-4 rounded">Contact via WhatsApp</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- footer end -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  // Improve AOS performance on small screens: remove long stagger delays
+  const isMobile = window.innerWidth < 768;
+  if (isMobile) {
+    // remove data-aos-delay attributes so items animate immediately
+    document.querySelectorAll('[data-aos-delay]').forEach(el => el.removeAttribute('data-aos-delay'));
+  }
+  AOS.init({ once: true, duration: isMobile ? 450 : 800 });
+  if (typeof AOS !== 'undefined' && AOS.refresh) AOS.refresh();
+
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    // On small screens animate from top using translateY + opacity
+    if (window.innerWidth < 768) {
+      const isHidden = menu.classList.contains('-translate-y-full') || menu.classList.contains('opacity-0') || getComputedStyle(menu).opacity === '0';
+      if (isHidden) {
+        menu.classList.remove('-translate-y-full', 'opacity-0', 'max-h-0');
+        menu.classList.add('translate-y-0', 'opacity-100', 'max-h-96');
+      } else {
+        menu.classList.remove('translate-y-0', 'opacity-100', 'max-h-96');
+        menu.classList.add('-translate-y-full', 'opacity-0', 'max-h-0');
+      }
+    } else {
+      // desktop fallback: toggle max-height as before
+      if (menu.classList.contains("max-h-0")) {
+        menu.classList.remove("max-h-0");
+        menu.classList.add("max-h-96");
+      } else {
+        menu.classList.remove("max-h-96");
+        menu.classList.add("max-h-0");
+      }
+    }
+
+    // menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  // close menu when a link is clicked (mobile)
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (menu.classList.contains('max-h-none')) {
+        menu.classList.remove('max-h-none');
+        menu.classList.add('max-h-0');
+        menu.querySelectorAll('a').forEach(a => a.classList.add('opacity-0'));
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // close menu on scroll (mobile only)
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth < 768 && menu.classList.contains('max-h-none')) {
+      menu.classList.remove('max-h-none');
+      menu.classList.add('max-h-0');
+      menu.querySelectorAll('a').forEach(a => a.classList.add('opacity-0'));
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+<script>
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 40) {
+      navbar.classList.remove("bg-gray-800/30");
+      navbar.classList.add("bg-gray-800");
+    } else {
+      navbar.classList.remove("bg-gray-800");
+      navbar.classList.add("bg-gray-800/30");
+    }
+  });
+</script>
+</body>
+</html> 
