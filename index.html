@@ -30,48 +30,47 @@
 
 
 <!-- nav start -->
-<nav id="navbar" class="bg-gray-800/30 fixed w-full z-50">
-  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+<nav id="navbar" class="bg-gray-800/30 fixed w-full z-50 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
     
     <!-- Logo -->
-    <a href="#" class="text-white text-3xl font-bold">
-      <i class="px-4 bi bi-laptop"></i>MicronextEdu
+    <a href="#" class="text-white text-2xl font-bold">
+      <i class="bi bi-laptop px-2"></i>MicronextEdu
     </a>
 
-    <!-- Mobile Menu Button -->
+    <!-- Mobile Button -->
     <button id="menu-btn" aria-expanded="false" aria-label="Toggle menu"
       class="text-white md:hidden focus:outline-none">
       <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
+          d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
 
     <!-- Menu -->
     <div id="menu"
-      class="max-h-0 overflow-hidden md:max-h-none
-      absolute md:static rounded-lg md:rounded-none
-      top-full right-8 md:right-auto
-      w-[30%] md:w-auto
+      class="absolute md:static top-full right-6 md:right-auto
+      w-44 md:w-auto
       bg-gray-800 md:bg-transparent
-      rounded-b-lg md:rounded-none
+      rounded-lg md:rounded-none
       shadow-lg md:shadow-none
-      py-4 md:py-0
-      space-y-2 md:space-y-0
-      md:flex md:items-center md:space-x-6
+      overflow-hidden
       transform -translate-y-full opacity-0 md:translate-y-0 md:opacity-100
-      transition-transform duration-300 ease-out transition-[max-height] duration-500 ease-in-out">
+      transition-all duration-300 ease-in-out
+      md:flex md:items-center md:space-x-6">
 
-      <a href="#home" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Home</a>
-      <a href="#about" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">About</a>
-      <a href="#courses" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Courses</a>
-      <a href="#branches" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Branches</a>
-      <a href="#features" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Features</a>
-      <a href="#contact" class="block px-4 text-white hover:text-gray-300 py-2 md:py-0">Contact</a>
+      <a href="#home" class="block px-4 py-2 text-white hover:text-gray-300">Home</a>
+      <a href="#about" class="block px-4 py-2 text-white hover:text-gray-300">About</a>
+      <a href="#courses" class="block px-4 py-2 text-white hover:text-gray-300">Courses</a>
+      <a href="#branches" class="block px-4 py-2 text-white hover:text-gray-300">Branches</a>
+      <a href="#features" class="block px-4 py-2 text-white hover:text-gray-300">Features</a>
+      <a href="#contact" class="block px-4 py-2 text-white hover:text-gray-300">Contact</a>
 
     </div>
   </div>
 </nav>
+
+
 
 
 
@@ -426,69 +425,73 @@
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  // Improve AOS performance on small screens: remove long stagger delays
-  const isMobile = window.innerWidth < 768;
-  if (isMobile) {
-    // remove data-aos-delay attributes so items animate immediately
-    document.querySelectorAll('[data-aos-delay]').forEach(el => el.removeAttribute('data-aos-delay'));
-  }
-  AOS.init({ once: true, duration: isMobile ? 450 : 800 });
-  if (typeof AOS !== 'undefined' && AOS.refresh) AOS.refresh();
+document.addEventListener("DOMContentLoaded", function () {
 
+  const navbar = document.getElementById("navbar");
   const btn = document.getElementById("menu-btn");
   const menu = document.getElementById("menu");
 
-  btn.addEventListener("click", () => {
-    // On small screens animate from top using translateY + opacity
-    if (window.innerWidth < 768) {
-      const isHidden = menu.classList.contains('-translate-y-full') || menu.classList.contains('opacity-0') || getComputedStyle(menu).opacity === '0';
-      if (isHidden) {
-        menu.classList.remove('-translate-y-full', 'opacity-0', 'max-h-0');
-        menu.classList.add('translate-y-0', 'opacity-100', 'max-h-96');
-      } else {
-        menu.classList.remove('translate-y-0', 'opacity-100', 'max-h-96');
-        menu.classList.add('-translate-y-full', 'opacity-0', 'max-h-0');
-      }
-    } else {
-      // desktop fallback: toggle max-height as before
-      if (menu.classList.contains("max-h-0")) {
-        menu.classList.remove("max-h-0");
-        menu.classList.add("max-h-96");
-      } else {
-        menu.classList.remove("max-h-96");
-        menu.classList.add("max-h-0");
-      }
-    }
+  // =========================
+  // AOS Optimization
+  // =========================
+  const isMobile = window.innerWidth < 768;
 
-    // menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  if (isMobile) {
+    document.querySelectorAll('[data-aos-delay]')
+      .forEach(el => el.removeAttribute('data-aos-delay'));
+  }
+
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      once: true,
+      duration: isMobile ? 450 : 800
+    });
+    AOS.refresh();
+  }
+
+  // =========================
+  // OPEN MENU
+  // =========================
+  function openMenu() {
+    menu.classList.remove('-translate-y-full', 'opacity-0', 'max-h-0');
+    menu.classList.add('translate-y-0', 'opacity-100', 'max-h-96');
+    btn.setAttribute("aria-expanded", "true");
+  }
+
+  // =========================
+  // CLOSE MENU
+  // =========================
+  function closeMenu() {
+    menu.classList.remove('translate-y-0', 'opacity-100', 'max-h-96');
+    menu.classList.add('-translate-y-full', 'opacity-0', 'max-h-0');
+    btn.setAttribute("aria-expanded", "false");
+  }
+
+  // =========================
+  // TOGGLE MENU
+  // =========================
+  btn.addEventListener("click", () => {
+    const isOpen = menu.classList.contains("translate-y-0");
+    isOpen ? closeMenu() : openMenu();
   });
-  // close menu when a link is clicked (mobile)
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (menu.classList.contains('max-h-none')) {
-        menu.classList.remove('max-h-none');
-        menu.classList.add('max-h-0');
-        menu.querySelectorAll('a').forEach(a => a.classList.add('opacity-0'));
-        menuBtn.setAttribute('aria-expanded', 'false');
+
+  // =========================
+  // CLOSE ON LINK CLICK (Mobile)
+  // =========================
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 768) {
+        closeMenu();
       }
     });
   });
 
-  // close menu on scroll (mobile only)
-  window.addEventListener('scroll', () => {
-    if (window.innerWidth < 768 && menu.classList.contains('max-h-none')) {
-      menu.classList.remove('max-h-none');
-      menu.classList.add('max-h-0');
-      menu.querySelectorAll('a').forEach(a => a.classList.add('opacity-0'));
-      menuBtn.setAttribute('aria-expanded', 'false');
-    }
-  });
-</script>
+  // =========================
+  // SCROLL EFFECT
+  // =========================
+  window.addEventListener("scroll", () => {
 
-<script>
-  const navbar = document.getElementById("navbar");
-
-  window.addEventListener("scroll", function () {
+    // Navbar background change
     if (window.scrollY > 40) {
       navbar.classList.remove("bg-gray-800/30");
       navbar.classList.add("bg-gray-800");
@@ -496,7 +499,15 @@
       navbar.classList.remove("bg-gray-800");
       navbar.classList.add("bg-gray-800/30");
     }
+
+    // Close menu on scroll (mobile)
+    if (window.innerWidth < 768 && menu.classList.contains("translate-y-0")) {
+      closeMenu();
+    }
+
   });
+
+});
 </script>
 </body>
-</html> 
+</html>
